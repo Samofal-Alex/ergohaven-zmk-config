@@ -26,24 +26,13 @@
 
         base {
             bindings = <
-&kp ESC    &kp Q  &kp W     &kp E     &kp R   &kp T                      &kp Y      &kp U  &kp I             &kp O              &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S     &kp D     &kp F   &kp G                      &kp H      &kp J  &kp K             &kp L              &kp SEMI  &kp BSLH
-&kp LSHFT  &kp Z  &kp X     &kp C     &kp V   &kp B                      &kp N      &kp M  &kp COMMA         &kp DOT            &kp SQT   &kp RSHFT
-                  &kp LALT  &kp LGUI  &tog 1  &kp SPACE  &mo 2    &mo 3  &kp ENTER  &mo 5  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ESC    &kp Q  &kp W     &kp E     &kp R      &kp T                      &kp Y      &kp U  &kp I             &kp O              &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S     &kp D     &kp F      &kp G                      &kp H      &kp J  &kp K             &kp L              &kp SEMI  &kp BSLH
+&kp LSHFT  &kp Z  &kp X     &kp C     &kp V      &kp B                      &kp N      &kp M  &kp COMMA         &kp DOT            &kp SQT   &kp RSHFT
+                  &kp LALT  &kp LGUI  &kp LCTRL  &kp SPACE  &mo 1    &mo 2  &kp ENTER  &mo 4  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             display-name = "Base";
-        };
-
-        ru {
-            bindings = <
-&kp ESC         &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BSPC
-&kp TAB         &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_IO
-&kp LEFT_SHIFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &kp RIGHT_SHIFT
-                                         &kp LALT              &kp LEFT_GUI        &tog 1              &kp SPACE           &mo 2    &mo 3  &kp ENTER           &mo 5                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
-            >;
-
-            display-name = "ru";
         };
 
         sym {
@@ -51,7 +40,7 @@
 &trans  &trans     &none   &none   &none   &none                      &kp TILDE     &kp AMPERSAND    &none             &none              &trans    &trans
 &trans  &none      &none   &none   &none   &none                      &kp DLLR      &kp EXCLAMATION  &kp QUESTION      &kp AT_SIGN        &kp SEMI  &none
 &trans  &kp UNDER  &none   &none   &none   &none                      &kp RU_RUBLE  &kp POUND        &kp COMMA         &kp DOT            &kp SQT   &trans
-                   &trans  &trans  &trans  &kp SPACE  &none    &mo 4  &trans        &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                   &trans  &trans  &trans  &kp SPACE  &none    &mo 3  &trans        &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             display-name = "Symbols";
@@ -62,7 +51,7 @@
 &trans  &kp RU_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp RU_ASTERISK                  &kp RU_RIGHT_PARENTHESIS  &kp RU_NUMERO  &kp UP          &none             &kp GRAVE  &kp DELETE
 &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none                            &kp RU_LEFT_PARENTHESIS   &kp LEFT       &kp DOWN        &kp RIGHT_ARROW   &kp COLON  &kp FSLH
 &trans  &kp RU_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp RU_PERCENT                   &kp CLCK                  &kp CARET      &kp LESS_THAN   &kp GREATER_THAN  &kp DQT    &trans
-                         &trans           &trans           &kp RU_EQUAL     &trans           &mo 4    &none  &none                     &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE
+                         &trans           &trans           &kp RU_EQUAL     &trans           &mo 3    &none  &none                     &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
 
             display-name = "Navigation";
@@ -82,7 +71,7 @@
         mouse {
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mo 1   &mkp MB3  &mkp MB2  &mkp MB1  &mo 6                     &mo 6   &mkp MB1  &mkp MB2  &mkp MB3  &mo 1   &trans
+&trans  &mo 7   &mkp MB3  &mkp MB2  &mkp MB1  &mo 5                     &mo 5   &mkp MB1  &mkp MB2  &mkp MB3  &mo 7   &trans
 &trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
                 &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
             >;
@@ -99,6 +88,17 @@
             >;
 
             display-name = "Sniper";
+        };
+
+        ru {
+            bindings = <
+&kp ESC         &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BSPC
+&kp TAB         &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_IO
+&kp LEFT_SHIFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &kp RIGHT_SHIFT
+                                         &kp LALT              &kp LEFT_GUI        &tog 7              &kp SPACE           &mo 1    &mo 2  &kp ENTER           &mo 4                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+            >;
+
+            display-name = "ru";
         };
 
         User0 {

@@ -21,6 +21,24 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ruen {
+            bindings = <&ruenqq>;
+            key-positions = <16 15>;
+        };
+    };
+
+    macros {
+        ruenqq: ruen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp LEFT_ALT>;
+            label = "RUEN";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

@@ -71,10 +71,10 @@
 
         nav {
             bindings = <
-&trans  &kp PERCENT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &none     &none      &kp UP    &none            &kp GRAVE  &kp DELETE
-&trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                  &none     &kp LEFT   &kp DOWN  &kp RIGHT_ARROW  &none      &none
-&trans  &kp FSLH      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK                  &kp CLCK  &kp CARET  &none     &none            &none      &trans
-                      &trans        &trans        &kp RU_EQUAL  &trans     &mo 3    &none  &none     &trans     &none     &none
+&trans  &kp PERCENT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &kp PLUS                   &none     &none      &kp UP    &none            &kp GRAVE  &kp DELETE
+&trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS                  &none     &kp LEFT   &kp DOWN  &kp RIGHT_ARROW  &none      &none
+&trans  &kp FSLH      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &kp ASTRK                  &kp CLCK  &kp CARET  &none     &none            &none      &trans
+                      &trans        &trans        &mt LCTRL RU_EQUAL  &trans     &mo 3    &none  &none     &trans     &none     &none
             >;
 
             display-name = "Navigation";

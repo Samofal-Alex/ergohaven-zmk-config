@@ -25,13 +25,23 @@
         compatible = "zmk,combos";
 
         ruen {
-            bindings = <&ruenqq>;
+            bindings = <&ruEn_shift_ctrl>;
             key-positions = <16 15>;
         };
 
         enru {
             bindings = <&ruenqq>;
             key-positions = <19 20>;
+        };
+
+        ctrl_alt_del {
+            bindings = <&ctrl_alt_del>;
+            key-positions = <15 20>;
+        };
+
+        password {
+            bindings = <&password>;
+            key-positions = <16 19>;
         };
     };
 
@@ -41,6 +51,27 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LEFT_ALT)>;
             label = "RUEN";
+        };
+
+        ruEn_shift_ctrl: ruEn_shift_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LCTRL)>;
+            label = "RUEN_SHIFT_CTRL";
+        };
+
+        ctrl_alt_del: ctrl_alt_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(DELETE))>;
+            label = "CTRL_ALT_DEL";
+        };
+
+        password: password {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp N &kp A &kp N &kp A &kp S &kp N4 &kp N6 &kp N1 &kp N3 &kp N3 &kp N7 &kp N4 &kp EXCL>;
+            label = "PASSWORD";
         };
     };
 

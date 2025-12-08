@@ -135,8 +135,8 @@
             bindings = <
 &trans          &trans  &kp F1   &kp F2   &kp F3  &none                      &none         &kp RU_NUMERO  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_COLON          &kp RU_SLASH
 &trans          &none   &kp F4   &kp F5   &kp F6  &none                      &kp RU_RUBLE  &kp RU_EXCL    &kp RU_QMARK          &kp AT_SIGN            &kp RU_SEMICOLON      &mt PIPE RU_BACKSLASH
-&kp LEFT_SHIFT  &none   &kp F7   &kp F8   &kp F9  &kp F10                    &none         &none          &kp LESS_THAN         &kp GREATER_THAN       &kp RU_DOUBLE_QUOTES  &kp RIGHT_SHIFT
-                        &kp F11  &kp F12  &trans  &kp SPACE  &none    &mo 6  &trans        &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &none   &kp F7   &kp F8   &kp F9  &kp F10                    &none         &none          &none                 &none                  &kp RU_DOUBLE_QUOTES  &kp RIGHT_SHIFT
+                        &kp F11  &kp F12  &trans  &kp SPACE  &none    &mo 6  &trans        &trans         &none                 &none
             >;
         };
 

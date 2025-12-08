@@ -30,7 +30,7 @@
         };
 
         layerEn {
-            bindings = <&ruEn_shift_alt>;
+            bindings = <&layerEn>;
             key-positions = <7 8>;
         };
 

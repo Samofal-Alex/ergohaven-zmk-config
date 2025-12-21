@@ -46,7 +46,7 @@
 
         ruEnSystem {
             bindings = <&ruEn_shift_ctrl>;
-            key-positions = <13 22>;
+            key-positions = <3 7>;
         };
     };
 

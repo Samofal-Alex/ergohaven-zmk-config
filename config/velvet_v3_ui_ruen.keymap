@@ -126,10 +126,10 @@
 
         sym_en {
             bindings = <
-&trans          &none  &kp F1   &kp F2   &kp F3  &kp GRAVE                   &kp NUBS  &kp COLON  &kp SEMI       &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RPAR
-&trans          &none  &kp F4   &kp F5   &kp F6  &kp PLUS                    &kp FSLH  &kp EXCL   &kp QMARK      &kp AT_SIGN       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                     &kp HASH  &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE
-                       &kp F11  &kp F12  &trans  &none      &trans    &mo 5  &trans    &trans     &none          &none
+&none           &none  &kp F1   &kp F2   &kp F3  &none                    &kp NUBS  &kp COLON  &kp SEMI       &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RPAR
+&none           &none  &kp F4   &kp F5   &kp F6  &none                    &kp FSLH  &kp EXCL   &kp QMARK      &kp AT_SIGN       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                  &kp HASH  &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE
+                       &kp F11  &kp F12  &none   &none    &none    &mo 5  &none     &none      &kp DOLLAR     &none
             >;
 
             display-name = "Symbols";
@@ -138,10 +138,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&none   &none  &kp F1   &kp F2   &kp F3  &none                       &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &kp GRAVE  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
-&none   &none  &kp F4   &kp F5   &kp F6  &none                       &kp FSLH       &kp RU_EXCLAMATION    &kp RU_QUESTION   &none      &none                    &none
-&trans  &none  &kp F7   &kp F8   &kp F9  &kp F10                     &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none      &none                    &kp RIGHT_SHIFT
-               &kp F11  &kp F12  &trans  &kp SPACE  &trans    &mo 5  &trans         &trans                &none             &none
+&none  &none  &kp F1   &kp F2   &kp F3  &none                      &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &none  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
+&none  &none  &kp F4   &kp F5   &kp F6  &none                      &kp RU_SLASH   &kp RU_EXCLAMATION    &kp RU_QUESTION   &none  &none                    &none
+&none  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none  &none                    &kp RIGHT_SHIFT
+              &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 5  &none          &none                 &none             &none
             >;
         };
 

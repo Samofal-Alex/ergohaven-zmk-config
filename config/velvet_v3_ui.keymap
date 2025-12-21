@@ -46,7 +46,7 @@
 
         ruEnSystem {
             bindings = <&ruEn_shift_ctrl>;
-            key-positions = <3 7>;
+            key-positions = <7 4>;
         };
     };
 
@@ -121,10 +121,10 @@
 
         sym {
             bindings = <
-&trans          &trans  &kp F1   &kp F2   &kp F3  &none                      &none      &kp RU_NUMERO  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE          &kp SLASH
-&trans          &none   &kp F4   &kp F5   &kp F6  &none                      &kp DLLR   &kp EXCL       &kp QMARK             &kp AT_SIGN            &kp SEMI           &kp BACKSLASH
-&kp LEFT_SHIFT  &none   &kp F7   &kp F8   &kp F9  &kp F10                    &kp CARET  &none          &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &kp RIGHT_SHIFT
-                        &kp F11  &kp F12  &trans  &kp SPACE  &none    &mo 6  &trans     &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&none           &none  &kp F1   &kp F2   &kp F3  &none                      &kp NUBS  &kp COLON          &kp SEMI       &kp GRAVE         &kp LPAR          &kp RIGHT_PARENTHESIS
+&none           &none  &kp F4   &kp F5   &kp F6  &none                      &kp FSLH  &kp EXCL           &kp QMARK      &kp AT_SIGN       &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp HASH  &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE    &kp RIGHT_BRACE
+                       &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 6  &none     &none              &none          &none
             >;
 
             display-name = "Symbols";
@@ -133,19 +133,19 @@
         ruSymbol {
             display-name = "Symbols";
             bindings = <
-&trans          &trans  &kp F1   &kp F2   &kp F3  &none                      &none         &kp RU_NUMERO  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RU_COLON          &kp RU_SLASH
-&trans          &none   &kp F4   &kp F5   &kp F6  &none                      &kp RU_RUBLE  &kp RU_EXCL    &kp RU_QMARK          &kp AT_SIGN            &kp RU_SEMICOLON      &mt PIPE RU_BACKSLASH
-&kp LEFT_SHIFT  &none   &kp F7   &kp F8   &kp F9  &kp F10                    &none         &none          &none                 &none                  &kp RU_DOUBLE_QUOTES  &kp RIGHT_SHIFT
-                        &kp F11  &kp F12  &trans  &kp SPACE  &none    &mo 6  &trans        &trans         &none                 &none
+&none           &none  &kp F1   &kp F2   &kp F3  &none                      &kp RU_BACKSLASH  &kp RU_COLON          &kp RU_SEMICOLON  &kp GRAVE  &kp RU_LEFT_PARENTHESIS  &kp RU_RPAR
+&none           &none  &kp F4   &kp F5   &kp F6  &none                      &kp RU_SLASH      &kp RU_EXCL           &kp RU_QMARK      &none      &none                    &none
+&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp RU_NUMERO     &kp RU_DOUBLE_QUOTES  &none             &none      &none                    &kp RIGHT_SHIFT
+                       &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 6  &none             &none                 &none             &none
             >;
         };
 
         nav {
             bindings = <
-&trans          &kp PERCENT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &none  &none     &kp UP    &none            &none  &kp DELETE
-&kp CAPSLOCK    &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                  &none  &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &none
-&kp LEFT_SHIFT  &kp FSLH      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK                  &none  &none     &none     &none            &none  &kp RIGHT_SHIFT
-                              &trans        &trans        &kp EQUAL     &kp SPACE  &mo 6    &none  &none  &trans    &none     &none
+&none           &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp DELETE
+&kp CAPSLOCK    &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &none
+&kp LEFT_SHIFT  &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
+                              &none         &none         &none         &kp SPACE  &mo 6    &none  &kp ENTER  &none     &none     &none
             >;
 
             display-name = "Navigation";
@@ -154,8 +154,8 @@
         mouse {
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mo 8   &mkp MB3  &mkp MB2  &mkp MB1  &mo 7                     &mo 7   &mkp MB1  &mkp MB2  &mkp MB3  &mo 8   &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &mo 7   &mkp MB3  &mkp MB2  &mkp MB1  &mo 8                     &mo 8   &mkp MB1  &mkp MB2  &mkp MB3  &mo 7   &trans
+&trans  &trans  &trans    &trans    &mo 8     &trans                    &trans  &mo 8     &trans    &trans    &trans  &trans
                 &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
             >;
 

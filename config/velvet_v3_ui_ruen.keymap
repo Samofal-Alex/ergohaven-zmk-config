@@ -38,6 +38,21 @@
             bindings = <&to_ruEn>;
             key-positions = <16 15>;
         };
+
+        roundBracket {
+            bindings = <&none>;
+            key-positions = <10 11>;
+        };
+
+        squareBracket {
+            bindings = <&none>;
+            key-positions = <22 23>;
+        };
+
+        curlyBrace {
+            bindings = <&none>;
+            key-positions = <34 35>;
+        };
     };
 
     macros {
@@ -75,6 +90,27 @@
             bindings = <&none &kp LS(A) &kp N &kp A &kp N &kp A &kp S &kp N4 &kp N6 &kp N1 &kp N3 &kp N3 &kp N7 &kp N4 &kp EXCL>;
             label = "PW";
         };
+
+        roundBracket: roundBracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            label = "ROUNDBRACKET";
+        };
+
+        squareBracket: curlyBrace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            label = "CURLYBRACE";
+        };
+
+        curlyBrace: squareBracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp ENTER &kp ENTER &kp RIGHT_BRACE &kp UP>;
+            label = "SQUAREBRACKET";
+        };
     };
 
     keymap {
@@ -82,10 +118,10 @@
 
         en {
             bindings = <
-&kp ESC    &kp Q  &kp W     &kp E     &kp R      &kp T                                         &kp Y            &kp U  &kp I   &kp O   &kp P   &kp BSPC
-&kp TAB    &kp A  &kp S     &kp D     &kp F      &kp G                                         &kp H            &kp J  &kp K   &kp L   &trans  &trans
-&kp LSHFT  &kp Z  &kp X     &kp C     &kp V      &kp B                                         &kp N            &kp M  &trans  &trans  &trans  &kp RSHFT
-                  &kp LALT  &kp LGUI  &kp LCTRL  &mt LEFT_ALT SPACE  &lt 3 COMMA    &lt 2 DOT  &mt RCTRL ENTER  &mo 6  &trans  &trans
+&kp ESC    &kp Q  &kp W     &kp E   &kp R      &kp T                                         &kp Y            &kp U  &kp I   &kp O   &kp P   &kp BSPC
+&kp TAB    &kp A  &kp S     &kp D   &kp F      &kp G                                         &kp H            &kp J  &kp K   &kp L   &trans  &trans
+&kp LSHFT  &kp Z  &kp X     &kp C   &kp V      &kp B                                         &kp N            &kp M  &trans  &trans  &trans  &kp RSHFT
+                  &kp LGUI  &tog 2  &kp LCTRL  &mt LEFT_ALT SPACE  &lt 3 COMMA    &lt 2 DOT  &mt RCTRL ENTER  &mo 6  &trans  &trans
             >;
 
             display-name = "Base";
@@ -103,7 +139,7 @@
 
         nav {
             bindings = <
-&trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp DELETE
+&trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp BACKSPACE
 &kp CAPS        &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &trans
 &kp LEFT_SHIFT  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
                         &none         &none         &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
@@ -117,7 +153,7 @@
 &none           &none  &kp F1   &kp F2   &kp F3  &none                    &kp NUBS  &kp COLON  &kp SEMI       &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RPAR
 &none           &none  &kp F4   &kp F5   &kp F6  &none                    &kp FSLH  &kp EXCL   &kp QMARK      &kp AT_SIGN       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                  &kp HASH  &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE
-                       &kp F11  &kp F12  &none   &none    &none    &mo 5  &none     &none      &kp DOLLAR     &none
+                       &kp F11  &kp F12  &none   &none    &none    &mo 5  &none     &none      &kp DOLLAR     &kp AMPERSAND
             >;
 
             display-name = "Symbols";
@@ -126,10 +162,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&none  &none  &kp F1   &kp F2   &kp F3  &none                      &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &none  &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
-&none  &none  &kp F4   &kp F5   &kp F6  &none                      &kp RU_SLASH   &kp RU_EXCLAMATION    &kp RU_QUESTION   &none  &none                    &none
-&none  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none  &none                    &kp RIGHT_SHIFT
-              &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 5  &none          &none                 &none             &none
+&none           &none  &kp F1   &kp F2   &kp F3  &none                      &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &none          &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
+&none           &none  &kp F4   &kp F5   &kp F6  &none                      &kp RU_SLASH   &kp RU_EXCLAMATION    &kp RU_QUESTION   &none          &none                    &none
+&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none          &none                    &kp RIGHT_SHIFT
+                       &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 5  &none          &none                 &none             &kp AMPERSAND
             >;
         };
 

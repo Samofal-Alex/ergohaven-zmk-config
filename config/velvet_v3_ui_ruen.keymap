@@ -40,18 +40,53 @@
         };
 
         roundBracket {
-            bindings = <&none>;
+            bindings = <&roundBracket>;
             key-positions = <10 11>;
         };
 
         squareBracket {
-            bindings = <&none>;
+            bindings = <&squareBracket>;
             key-positions = <22 23>;
         };
 
         curlyBrace {
-            bindings = <&none>;
+            bindings = <&curlyBrace>;
             key-positions = <34 35>;
+        };
+
+        dqt {
+            bindings = <&dqt>;
+            key-positions = <38 32>;
+        };
+
+        grave {
+            bindings = <&grave>;
+            key-positions = <38 9>;
+        };
+
+        nazadStranica {
+            bindings = <&NazadStranica>;
+            key-positions = <38 19>;
+        };
+
+        vperedStranica {
+            bindings = <&vperedStranica>;
+            key-positions = <38 20>;
+        };
+
+        vperedVkladki {
+            bindings = <&vperedVkladki>;
+            key-positions = <39 20>;
+        };
+
+        nazadVkladki {
+            bindings = <&NazadVkladki>;
+            key-positions = <39 19>;
+        };
+
+        poslednyyStranica {
+            bindings = <&poslednyyVkladka>;
+            key-positions = <42 39>;
         };
     };
 
@@ -110,6 +145,55 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp ENTER &kp ENTER &kp RIGHT_BRACE &kp UP>;
             label = "SQUAREBRACKET";
+        };
+
+        dqt: dqt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            label = "DQT";
+        };
+
+        grave: grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            label = "GRAVE";
+        };
+
+        NazadStranica: vperedNazadStranica {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW)>;
+            label = "VPEREDNAZADSTRANICA";
+        };
+
+        vperedVkladki: vperedNazadVkladki {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "VPEREDNAZADVKLADKI";
+        };
+
+        poslednyyVkladka: poslednyyVkladka {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(GRAVE))>;
+            label = "POSLEDNYYVKLADKA";
+        };
+
+        NazadVkladki: NazadVkladki {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(TAB))>;
+            label = "NAZADVKLADKI";
+        };
+
+        vperedStranica: vperedStranica {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            label = "VPEREDSTRANICA";
         };
     };
 

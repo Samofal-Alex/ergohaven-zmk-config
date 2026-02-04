@@ -217,7 +217,7 @@
 &kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BSPC
 &kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_IO
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &kp RSHFT
-                                    &kp LALT              &kp LGUI            &kp LCTRL           &mt LEFT_ALT SPACE  &lt 4 RU_COMMA    &lt 2 RU_DOT  &mt RCTRL ENTER     &mo 6                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                    &kp LALT              &tog 9              &kp LCTRL           &mt LEFT_ALT SPACE  &lt 4 RU_COMMA    &lt 2 RU_DOT  &mt RCTRL ENTER     &mo 6                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -226,7 +226,7 @@
 &trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp BACKSPACE
 &kp CAPS        &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &trans
 &kp LEFT_SHIFT  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
-                        &none         &none         &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
+                        &none         &tog 0        &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
             >;
 
             display-name = "Navigation";
@@ -295,6 +295,16 @@
             >;
 
             display-name = "Sniper";
+        };
+
+        layer_9 {
+            display-name = "Navigation";
+            bindings = <
+&trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp BACKSPACE
+&kp CAPS        &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &trans
+&kp LEFT_SHIFT  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
+                        &none         &tog 1        &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
+            >;
         };
     };
 };

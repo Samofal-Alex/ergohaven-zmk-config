@@ -56,7 +56,7 @@
 
         dqt {
             bindings = <&dqt>;
-            key-positions = <38 32>;
+            key-positions = <38 31>;
         };
 
         grave {
@@ -82,11 +82,6 @@
         nazadVkladki {
             bindings = <&NazadVkladki>;
             key-positions = <39 19>;
-        };
-
-        poslednyyStranica {
-            bindings = <&poslednyyVkladka>;
-            key-positions = <42 39>;
         };
     };
 
@@ -129,14 +124,14 @@
         roundBracket: roundBracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
             label = "ROUNDBRACKET";
         };
 
         squareBracket: curlyBrace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
             label = "CURLYBRACE";
         };
 
@@ -150,14 +145,14 @@
         dqt: dqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
             label = "DQT";
         };
 
         grave: grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp SPACE &kp SPACE &kp LEFT_ARROW>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
             label = "GRAVE";
         };
 
@@ -173,13 +168,6 @@
             #binding-cells = <0>;
             bindings = <&kp LC(TAB)>;
             label = "VPEREDNAZADVKLADKI";
-        };
-
-        poslednyyVkladka: poslednyyVkladka {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(GRAVE))>;
-            label = "POSLEDNYYVKLADKA";
         };
 
         NazadVkladki: NazadVkladki {
@@ -202,10 +190,10 @@
 
         en {
             bindings = <
-&kp ESC    &kp Q  &kp W     &kp E   &kp R      &kp T                                         &kp Y            &kp U  &kp I   &kp O   &kp P   &kp BSPC
-&kp TAB    &kp A  &kp S     &kp D   &kp F      &kp G                                         &kp H            &kp J  &kp K   &kp L   &trans  &trans
-&kp LSHFT  &kp Z  &kp X     &kp C   &kp V      &kp B                                         &kp N            &kp M  &trans  &trans  &trans  &kp RSHFT
-                  &kp LGUI  &tog 2  &kp LCTRL  &mt LEFT_ALT SPACE  &lt 3 COMMA    &lt 2 DOT  &mt RCTRL ENTER  &mo 6  &trans  &trans
+&kp ESC    &kp Q  &kp W     &kp E  &kp R      &kp T                                         &kp Y            &kp U  &kp I  &kp O  &kp P  &kp BSPC
+&kp TAB    &kp A  &kp S     &kp D  &kp F      &kp G                                         &kp H            &kp J  &kp K  &kp L  &none  &none
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B                                         &kp N            &kp M  &none  &none  &none  &kp RSHFT
+                  &kp LGUI  &none  &kp LCTRL  &mt LEFT_ALT SPACE  &lt 3 COMMA    &lt 2 DOT  &mt RCTRL ENTER  &mo 6  &none  &none
             >;
 
             display-name = "Base";
@@ -217,7 +205,7 @@
 &kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &kp BSPC
 &kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_IO
 &kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &kp RSHFT
-                                    &kp LALT              &tog 9              &kp LCTRL           &mt LEFT_ALT SPACE  &lt 4 RU_COMMA    &lt 2 RU_DOT  &mt RCTRL ENTER     &mo 6                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+                                    &kp LALT              &none               &kp LCTRL           &mt LEFT_ALT SPACE  &lt 4 RU_COMMA    &lt 2 RU_DOT  &mt RCTRL ENTER     &mo 6                      &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -226,7 +214,7 @@
 &trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp BACKSPACE
 &kp CAPS        &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &trans
 &kp LEFT_SHIFT  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
-                        &none         &tog 0        &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
+                        &none         &none         &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
             >;
 
             display-name = "Navigation";
@@ -237,7 +225,7 @@
 &none           &none  &kp F1   &kp F2   &kp F3  &none                    &kp NUBS  &kp COLON  &kp SEMI       &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RPAR
 &none           &none  &kp F4   &kp F5   &kp F6  &none                    &kp FSLH  &kp EXCL   &kp QMARK      &kp AT_SIGN       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                  &kp HASH  &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE
-                       &kp F11  &kp F12  &none   &none    &none    &mo 5  &none     &none      &kp DOLLAR     &kp AMPERSAND
+                       &kp F11  &kp F12  &none   &trans   &none    &mo 5  &none     &none      &kp DOLLAR     &kp AMPERSAND
             >;
 
             display-name = "Symbols";
@@ -246,10 +234,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&none           &none  &kp F1   &kp F2   &kp F3  &none                      &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &none          &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
-&none           &none  &kp F4   &kp F5   &kp F6  &none                      &kp RU_SLASH   &kp RU_EXCLAMATION    &kp RU_QUESTION   &none          &none                    &none
-&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                    &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none          &none                    &kp RIGHT_SHIFT
-                       &kp F11  &kp F12  &none   &kp SPACE  &none    &mo 5  &none          &none                 &none             &kp AMPERSAND
+&none           &none  &kp F1   &kp F2   &kp F3  &none                    &kp NUBS       &kp RU_COLON          &kp RU_SEMICOLON  &none          &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS
+&none           &none  &kp F4   &kp F5   &kp F6  &none                    &kp RU_SLASH   &kp RU_EXCLAMATION    &kp RU_QUESTION   &none          &none                    &none
+&kp LEFT_SHIFT  &none  &kp F7   &kp F8   &kp F9  &kp F10                  &kp RU_NUMERO  &kp RU_DOUBLE_QUOTES  &none             &none          &none                    &kp RIGHT_SHIFT
+                       &kp F11  &kp F12  &none   &trans   &none    &mo 5  &none          &none                 &none             &kp AMPERSAND
             >;
         };
 
@@ -295,16 +283,6 @@
             >;
 
             display-name = "Sniper";
-        };
-
-        layer_9 {
-            display-name = "Navigation";
-            bindings = <
-&trans          &none   &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                   &kp ASTRK  &kp HOME  &kp UP    &kp PG_UP        &none  &kp BACKSPACE
-&kp CAPS        &kp N0  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp MINUS                  &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &none  &trans
-&kp LEFT_SHIFT  &trans  &kp N7        &kp N8        &kp N9        &kp EQUAL                  &kp PRCNT  &kp END   &none     &kp PG_DN        &none  &kp RIGHT_SHIFT
-                        &none         &tog 1        &trans        &kp SPACE  &mo 5    &none  &kp ENTER  &trans    &trans    &trans
-            >;
         };
     };
 };
